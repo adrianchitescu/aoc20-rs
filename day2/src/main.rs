@@ -18,8 +18,8 @@ impl Password {
     }
 
     fn is_really_valid(&self) -> bool {
-        1 == (self.letter == self.value.chars().nth((self.range.0 - 1)  as usize).unwrap()) as i32 
-            + (self.letter == self.value.chars().nth((self.range.1 -1)  as usize).unwrap()) as i32
+        1 == (self.letter == self.value.chars().nth((self.range.0 - 1) as usize).unwrap()) as i32
+            + (self.letter == self.value.chars().nth((self.range.1 - 1) as usize).unwrap()) as i32
     }
 }
 
@@ -60,9 +60,9 @@ fn main() {
     });
 
     let vec = parse_input(&file_contents);
-	let valid_passwords = vec.iter().filter(|p| p.is_valid()).count();
-	let really_valid_passwords = vec.iter().filter(|p| p.is_really_valid()).count();
+    let valid_passwords = vec.iter().filter(|p| p.is_valid()).count();
+    let really_valid_passwords = vec.iter().filter(|p| p.is_really_valid()).count();
 
-	println!("valid p1: {}", valid_passwords);
-	println!("really_valid: {} ", really_valid_passwords);
+    println!("valid p1: {}", valid_passwords);
+    println!("really_valid: {} ", really_valid_passwords);
 }
