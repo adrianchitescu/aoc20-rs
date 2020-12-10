@@ -60,7 +60,7 @@ fn parse(input: &String) -> Vec<Passport> {
         .collect::<Vec<&str>>()
         .as_slice()
         .split(|l| l.is_empty())
-        .map(|x| 
+        .map(|x| 	
             x
                 .iter()
                 .map(|e| e.split_whitespace())
